@@ -7,54 +7,79 @@
     tools:context="com.example.guest.boggle.GameActivity">
 
     <TextView
-        android:text="@string/play_boggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/headerTextView"
+        android:layout_width="218dp"
+        android:layout_height="53dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/play_boggle"
+        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp" />
-
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnWidth="50sp"
-        android:numColumns="auto_fit"
-        android:stretchMode="spacingWidthUniform"
-        android:id="@+id/baseGridView"
-        android:padding="0dp"
-        android:gravity="left"
-        android:scrollingCache="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="40sp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/seconds_remaining_in_game"
+        app:layout_constraintBaseline_toBaselineOf="@+id/seconds_remaining_in_game" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="51dp"
         android:id="@+id/user_input_edit_text_field"
-        android:hint="@string/enter_a_word"/>
-
+        android:hint="@string/enter_a_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/baseGridView" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="129dp"
+        android:layout_height="53dp"
         android:id="@+id/submit_word_button"
         android:text="@string/submit"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="-383dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/baseGridView"
+        app:layout_constraintHorizontal_bias="0.95"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/user_input_edit_text_field" />
+
+    <TextView
+        android:layout_width="109dp"
+        android:layout_height="38dp"
+        android:id="@+id/seconds_remaining_in_game"
+        android:text="Timer"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <GridView
+        android:id="@+id/baseGridView"
+        android:layout_width="0dp"
+        android:layout_height="299dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:columnWidth="50sp"
+        android:gravity="left"
+        android:numColumns="auto_fit"
+        android:padding="0dp"
+        android:scrollingCache="false"
+        android:stretchMode="spacingWidthUniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/headerTextView"
+        app:layout_constraintVertical_bias="0.197" />
 
 </android.support.constraint.ConstraintLayout>

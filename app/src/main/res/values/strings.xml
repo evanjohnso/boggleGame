@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">boggle</string>
     <string name="new_game">New Game</string>
+    <string name="play_boggle">Play Boggle</string>
+    <string name="letter">Letter</string>
+    <string name="enter_a_word">Enter a word!</string>
+    <string name="submit">Submit</string>
 </resources>
